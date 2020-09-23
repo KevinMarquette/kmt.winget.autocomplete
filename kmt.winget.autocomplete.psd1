@@ -9,7 +9,7 @@
 @{
 
 # Script module or binary module file associated with this manifest.
-RootModule = 'winget.autocomplete.psm1'
+RootModule = 'kmt.winget.autocomplete.psm1'
 
 # Version number of this module.
 ModuleVersion = '0.1.0'
@@ -30,7 +30,7 @@ CompanyName = 'PowerShellExplained.com'
 Copyright = '(c) Kevin Marquette. All rights reserved.'
 
 # Description of the functionality provided by this module
-# Description = ''
+Description = 'enables the winget autocomplete functionality when imported'
 
 # Minimum version of the PowerShell engine required by this module
 # PowerShellVersion = ''

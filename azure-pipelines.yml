@@ -1,0 +1,27 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+#resources:
+#- repo: self
+#  clean: true
+#  fetchDepth: 1
+
+trigger:
+  batch: true
+  branches:
+    include:
+      - master
+
+pool:
+  vmImage: 'windows-2019'
+
+steps:
+- script: pwsh -Command {Install-Module PowerShellGet -Force}
+  displayName: 'Update powershellget'
+- script: pwsh --Command {Publish-Module -Path . -Nugetapikey $(nugetapikey) -Verbose -Force}
+  displayName: 'Build and Publish Module'
+  env:
+    nugetapikey: $(nugetapikey)
+
