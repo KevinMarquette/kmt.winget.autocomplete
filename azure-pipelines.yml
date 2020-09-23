@@ -20,7 +20,7 @@ pool:
 steps:
 - script: pwsh -Command {Install-Module PowerShellGet -Force}
   displayName: 'Update powershellget'
-- script: pwsh --Command {Publish-Module -Path . -Nugetapikey $(nugetapikey) -Verbose -Force}
+- script: pwsh -Command {Publish-Module -Path . -Nugetapikey $(nugetapikey) -Verbose -Force}
   displayName: 'Build and Publish Module'
   env:
     nugetapikey: $(nugetapikey)
