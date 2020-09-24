@@ -95,7 +95,7 @@ PrivateData = @{
     PSData = @{
 
         # Tags applied to this module. These help with module discovery in online galleries.
-        Tags = @('autocomplete')
+        Tags = @('autocomplete','tab','tabcomplete','completer','auto-completion','PSEdition_Core','PSEdition_Desktop','winget')
 
         # A URL to the license for this module.
         LicenseUri = 'https://github.com/KevinMarquette/winget.autocomplete/blob/master/LICENSE'
